@@ -1,11 +1,9 @@
-from django.template.context_processors import request
-from rest_framework import serializers, status
-from rest_framework.response import Response
+from rest_framework import serializers
 
 from .models import Movie
 
 
-class CinemaSerializer(serializers.ModelSerializer):
+class MovieSerializer(serializers.ModelSerializer):
     id = serializers.IntegerField(read_only=True)
     title = serializers.CharField()
     description = serializers.CharField()
